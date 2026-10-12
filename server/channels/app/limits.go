@@ -10,7 +10,9 @@ import (
 )
 
 const (
-	maxUsersLimit     = 200
+	// Internal patch: unlicensed user limits disabled. GetServerLimits only applies
+	// the hard-coded limits when maxUsersLimit > 0, so 0 means "no limit".
+	maxUsersLimit     = 0
 	maxUsersHardLimit = 250
 )
 
